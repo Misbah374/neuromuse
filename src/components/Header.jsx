@@ -3,7 +3,7 @@ const Header = () => {
     return(
         <header>
             <h1>NEUROMUSE</h1>
-            <p>Let's listen to your mood</p>
+            <p style={{paddingBottom:'10px'}}>Let's listen to your mood</p>
         </header>
     );
 };
