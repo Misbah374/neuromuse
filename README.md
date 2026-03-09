@@ -13,7 +13,7 @@ Neuromuse is a web application that generates customizable frequency tones and a
 https://neuromusee.netlify.app/
 
 ## Installation
-git clone https://github.com/Misbah374/neuromuse.git
-cd neuromuse
-npm install
-npm start
+git clone https://github.com/Misbah374/neuromuse.git<br>
+cd neuromuse<br>
+npm install<br>
+npm start<br>
