@@ -2,8 +2,7 @@
 import './App.css';
 import AboutUs from './components/AboutUs';
 import Header from './components/Header';
-import MoodSelector from './components/MoodSelector';
-import TomeGenerator from './components/MusicPlayer';
+import TomeGenerator from './components/FrequencySound';
 
 function App() {
   return (

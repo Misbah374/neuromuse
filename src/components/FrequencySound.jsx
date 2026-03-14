@@ -1,5 +1,4 @@
 import React, {useState, useRef} from "react";
-import MoodSelector from "./MoodSelector";
 
 const TomeGenerator = () =>{
     const [isPlaying, setIsPlaying] = useState(false);
@@ -49,13 +48,35 @@ const TomeGenerator = () =>{
     };
 
     return(
-        <div>
-            <MoodSelector frequency={freq} onFrequencyChange={handleFrequencyChange}/>
-            <button onClick={toggleTone} >    
-                {isPlaying? 'Stop':`Play ${freq}`}
-            </button>
-            <br></br><br></br>
+        <div><br></br>
+            <div className="card"><br></br>
+                <h2>Listen To a particular frequency</h2>
+                <MoodSelector frequency={freq} onFrequencyChange={handleFrequencyChange}/>
+                <button onClick={toggleTone} >    
+                    {isPlaying? 'Stop':`Play ${freq}`}
+                </button>
+                <br></br><br></br><br></br>
+            </div>
         </div>
     );
 };
+
+const MoodSelector = ( {frequency, onFrequencyChange} ) => {
+    const handleChange = (e) => {
+        const newValue = Number(e.target.value);
+        if(typeof onFrequencyChange === 'function'){
+            onFrequencyChange(newValue);
+        }
+    }
+
+    return(
+        <div>
+            <p>
+                
+                <input type="number" value={frequency} onChange={handleChange} min="20" max="20000" placeholder="Enter frequency in Hz"></input>
+            </p>
+        </div>
+    );
+};
+
 export default TomeGenerator;
